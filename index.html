@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h2>Expense Tracker</h2>
+    <main>
+      <div class="balance">
+        <h4>Your Balance</h4>
+        <h4>$<span id="balance-amount">0</span></h4>
+      </div>
+      <div class="income-expenses-box">
+        <div class="income">
+          <p>income</p>
+          <p>$<span id="income-amount">0</span></p>
+        </div>
+        <div class="expenses">
+          <p>Expense</p>
+          <p>$<span id="expenses-amount">0</span></p>
+        </div>
+      </div>
+      <section class="transaction">
+        <div class="history">
+          <h3 id="history">History</h3>
+          <ol id="history-list"></ol>
+        </div>
+
+        <form
+          action=""
+          method="post"
+          onsubmit="return false"
+          enctype="multipart/form-data"
+        >
+          <p>Add New Transaction</p>
+          <div>
+            <label for="text">Text</label>
+            <input type="text" name="" id="text" />
+          </div>
+
+          <div>
+            <label for="amount"
+              >Amount <span>(negative -expense, positive -income)</span></label
+            >
+            <input type="number" name="" id="amount" />
+          </div>
+
+          <div>
+            <input type="submit" value="Add transaction" id="submit" />
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
